@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script</title>
+	<style>
+		body{
+			font-size: 17px;
+			font-family: sans-serif;
+			background:#FFFFFF;
+		}
+		header{
+			text-align: center;
+			font-size: 20px;
+			background:#002b36;
+			color:white;
+			padding:30px;
+		}
+		.container{
+			text-align: center;
+			padding-top: 2em;
+			line-height: 2em;
+			font-size: 25px;
+		}
+		button{
+			width : 100px;
+			height:50px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 id = "heading">Learning JavaScript</h1>
+		<h3> with Mehmood </h3>
+	</header>
+	<div class = "container">
+		<button onClick="this.innerHTML = 'Submited'">Submit</button>
+		<br>
+		<button onClick = "changeText()">Change</button>
+		<br>
+		<button onClick = "showDate()" >Show Date</button>
+		<br>
+		<button onmouseout="clearDate()"  onmouseover="showDate()">Show Date again</button>
+		<br>
+
+		<button onClick="clicked()" id = "click">Click Me</button>
+		<h3 id = "time"></h3>
+	</div>-->
+
+	<script type="text/javascript">
+		// data types 4
+		// Numbers
+		// string
+		// Array
+		// object
+        // --------------Number--------
+		var number1 = 25;
+		var number2 = 35;
+		console.log(number1 + number2);
+
+		// -----------------string---------
+
+		var number3 = "25";
+		var number4 = "35";
+		console.log(number3+number4);
+
+		// letters numbers underscore and dollar sign
+		// should begin with letter
+		// case sensitive
+		// camel Case, partial case, underscore
+
+		// ---------ARRAY----------- mutable
+
+		/*var color =['red','green','blue'];
+		console.log(color[0]);
+
+		var colors = new Array('yellow' , "black" , 'white');
+		console.log(colors[0]);
+
+		colors[3] = 'orange';
+		console.log(colors);
+
+		colors.push('purple');
+
+		var number = [2,3,4,5];
+		var numbers = [1,7,8,9,'ten'];
+		console.log(number);
+		console.log(numbers);
+		console.log(numbers.length);
+		console.log(numbers.sort());*/
+
+
+		//-------------------loops-------------
+
+		/*for(var i = 0; i<5; i++){
+			console.log(i);
+		}
+		var i = 0;
+		while( i<5){
+			console.log(i);
+			i += 1;
+		}*/
+		//var numbers = [23,45,12,22,56];
+		//numbers.forEach(function(nu){
+		//	console.log(nu);
+		//});
+
+		//for(var i = 0; i<numbers.length; i++){
+		//	console.log(numbers[i]);
+		//};
+
+		// ---------------conditional---------------
+		/////// for to check data type we use this  '=== ' both have same data type
+		/*var num1 = 2;
+		var num2 = 3; 
+		if(num1 == num2){
+			console.log('this is true');
+		}
+		else{
+			console.log('false');
+		}
+
+		var fruit = "apple";
+
+		switch(fruit){
+			case "banana":
+				console.log("I hate bananas")
+				break;
+
+			case "orange":
+				console.log("I like oranges")
+				break;
+			case "apple":
+				console.log("I love apple")
+				break;
+			default:
+				console.log("I Love all other fruits");
+				break;
+		}*/
+
+		//--------------object------------
+		//object literal
+		/*
+		var person = {
+			firstName: "Mehmood",
+			lastName: "Munir",
+			age: 34,
+			email: "halcyoona@gmail.com",
+			children:["ahmad","ali","fatima"],
+			address:{
+				country:"Pakistan",
+				city:"Peshawar",
+				street:"fastNU"
+			},
+
+			fullName:function(){
+				return this.firstName+" "+this.lastName;
+			}
+		}
+		console.log(person.fullName());
+
+		//console.log(person.address.street);
+
+		*/
+
+		//object constructor
+        /*
+		var student = new Object();
+
+		student.name = 'Mehmood';
+		student.batch = 17;
+		student.cgpa = 3;
+		student.email = "halcyoona@gmail.com";
+		student.describe = function(){
+			return this.name+" "+"student of batch-"+this.batch+" "+"got"+" "+this.cgpa +" cgpa";
+		}
+
+		console.log(student.describe());
+		*/
+
+		// constructor pattern
+
+		/*function student(name,email,rollNumber){
+			this.name = name;
+			this.email = email;
+			this.rollNumber = rollNumber;
+			this.describe = function(){
+				return "This "+this.rollNumber+" is assigned to "+this.name;
+			}
+
+		}
+
+		var s1 = new student('Mehmood',"halcyoona@gmail.com","17p-6075");
+
+		console.log(s1.describe());*/
+
+		/*var student = [
+			{
+				name:"Mehmood",
+				age: 20
+			},
+			{
+				name:"Ahmed",
+				age: 30
+			},
+			{
+				name:"Robot",
+				age: 25
+			},
+			{
+				name:"Bahsir",
+				age: 30
+			}
+		];
+
+		console.log(student[0].name);*/
+
+
+		//--------------------Event--------------
+
+		function clicked(){
+			document.getElementById("click").innerHTML = "You clicked";
+		}
+
+		function changeText(){
+			var heading  = document.getElementById("heading");
+			heading.innerHTML = "you Clicked";
+		}
+
+		function showDate(){
+			var t = document.getElementById('time');
+			t.innerHTML = Date();
+		}
+
+		function clearDate(){
+			var time = document.getElementById('time');
+			time.innerHTML = '';	
+		}
+
+
+
+
+	</script>
+</body>
+</html>
